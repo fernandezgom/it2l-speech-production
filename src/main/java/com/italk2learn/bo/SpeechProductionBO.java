@@ -1,7 +1,10 @@
 package com.italk2learn.bo;
 
 import java.io.File;
+import java.util.Iterator;
 import java.util.Locale;
+import java.util.Map;
+import java.util.Map.Entry;
 import java.util.ResourceBundle;
 import java.util.Set;
 
@@ -18,6 +21,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import com.italk2learn.bo.inter.ISpeechProductionBO;
+import com.italk2learn.util.MessagesConverter;
 import com.italk2learn.vo.SpeechProductionRequestVO;
 import com.italk2learn.vo.SpeechProductionResponseVO;
 
@@ -30,21 +34,44 @@ public class SpeechProductionBO implements ISpeechProductionBO  {
 	
     public SpeechProductionResponseVO generateAudioFile(SpeechProductionRequestVO request) {
     	SpeechProductionResponseVO response= new SpeechProductionResponseVO();
+    	MessagesConverter mc = new MessagesConverter(); 
 		try {
+			Iterator<Entry<String, String>> it = mc.getMessages().entrySet().iterator();
+			while (it.hasNext()) {
+			    Map.Entry entry = (Map.Entry) it.next();
+			    String key = (String)entry.getKey();
+			    if (key.equals(request.getMessage())){
+			    	String value = (String)entry.getValue();
+			    	request.setMessage(value);
+			    }
+			} 
 			ResourceBundle rb= ResourceBundle.getBundle("speechproduction-config");
 			String _PATH=rb.getString("sp.path");
-			if (!existFile(_PATH+request.getMessage().hashCode()+".wav")){
+			String finalName=request.getMessage()+request.getLanguage()+request.isVoiceType();
+			if (!existFile(_PATH+finalName.hashCode()+".wav")){
 				MaryInterface marytts = new LocalMaryInterface();
 				Set<String> voices = marytts.getAvailableVoices();
 				logger.info("I currently have " + marytts.getAvailableVoices() + " voices in "
 					    + marytts.getAvailableLocales() + " languages available.");
 				logger.info("Out of these, " + marytts.getAvailableVoices(Locale.GERMAN) + " are for German.");
 				logger.info("Out of these, " + marytts.getAvailableVoices(Locale.ENGLISH) + " are for English.");
-				if (request.getLanguage().equals(SpeechProductionRequestVO.ENGLISH)){
-					marytts.setVoice("cmu-slt-hsmm");
+				if (request.getLanguage().contains(SpeechProductionRequestVO.ENGLISH)){
+					if (request.isVoiceType()==true){
+						marytts.setVoice("cmu-slt-hsmm");
+					}
+					else {
+						marytts.setVoice("cmu-slt-hsmm");
+					}
 				}
-				else if (request.getLanguage().equals(SpeechProductionRequestVO.GERMAN)) {
-					marytts.setVoice("bits1-hsmm");
+				else if (request.getLanguage().contains(SpeechProductionRequestVO.GERMAN)) {
+					if (request.isVoiceType()==true){
+						//JLF:Male voice
+						marytts.setVoice("dfki-pavoque-neutral-hsmm");
+					}
+					else {
+						//JLF:Female voice
+						marytts.setVoice("bits1-hsmm");
+					}
 				} else {
 					marytts.setVoice("cmu-slt-hsmm");
 				}
@@ -61,13 +88,13 @@ public class SpeechProductionBO implements ISpeechProductionBO  {
 		        AudioInputStream encodedASI = AudioSystem.getAudioInputStream(AudioFormat.Encoding.PCM_SIGNED, audio);
 	
 		        try {
-		            int i = AudioSystem.write(encodedASI, AudioFileFormat.Type.WAVE, new File(_PATH+request.getMessage().hashCode()+".wav"));
+		            int i = AudioSystem.write(encodedASI, AudioFileFormat.Type.WAVE, new File(_PATH+finalName.hashCode()+".wav"));
 		            logger.info("Bytes Written: "+i);
 		        } catch(Exception e){
 		            e.printStackTrace();
 		        }
 	        }
-	        response.setFile(request.getMessage().hashCode()+".wav");
+	        response.setFile(finalName.hashCode()+".wav");
 			return response;
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

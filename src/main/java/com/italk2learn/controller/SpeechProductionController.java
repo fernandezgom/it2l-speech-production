@@ -43,11 +43,8 @@ public class SpeechProductionController{
 	@ResponseBody
 	public String generateAudioFile(@RequestBody SpeechProductionRequestVO data, HttpServletRequest req) {
 		logger.info("JLF --- SpeechProductionController generateAudioFile --- Message= "+data.getMessage());
-		SpeechProductionRequestVO request= new SpeechProductionRequestVO();
 		try {
-			request.setMessage(data.getMessage());
-			request.setLanguage(data.getLanguage());
-			SpeechProductionResponseVO response=getSpeechProductionBO().generateAudioFile(request);
+			SpeechProductionResponseVO response=getSpeechProductionBO().generateAudioFile(data);
 			return response.getFile();
 		} catch (Exception e){
 			logger.error(e.toString());
