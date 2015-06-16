@@ -175,6 +175,14 @@
 			<type>jar</type>
 			<scope>compile</scope>
 		</dependency>
+<!-- 		English male voice -->
+		<dependency>
+			<groupId>de.dfki.mary</groupId>
+			<artifactId>voice-dfki-spike-hsmm</artifactId>
+			<version>5.2-SNAPSHOT</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
 <!-- 		German female voice -->
 		<dependency>
 			<groupId>de.dfki.mary</groupId>

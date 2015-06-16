@@ -57,9 +57,11 @@ public class SpeechProductionBO implements ISpeechProductionBO  {
 				logger.info("Out of these, " + marytts.getAvailableVoices(Locale.ENGLISH) + " are for English.");
 				if (request.getLanguage().contains(SpeechProductionRequestVO.ENGLISH)){
 					if (request.isVoiceType()==true){
-						marytts.setVoice("cmu-slt-hsmm");
+						//JLF:Male voice
+						marytts.setVoice("dfki-spike-hsmm");
 					}
 					else {
+						//JLF:Female voice
 						marytts.setVoice("cmu-slt-hsmm");
 					}
 				}
