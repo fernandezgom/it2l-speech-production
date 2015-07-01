@@ -21,36 +21,36 @@ public class MessagesConverter {
 		
 		//German
 		messages.put("Bitte lies die Aufgabe erneut. Was sollst du hier tun?","Bitte liies die Aufgabe erneut. Was sollst du hier tun?");
-		messages.put("Du gibst dir sehr viel Mühe! Das ist sehr gut!","Du gybst dir sehr viel Mühe! Das ist sehr gut!");
-		messages.put("Lies die Aufgabe erneut und erkläre, wie du vorgehst, um die Aufgabe zu lösen.","Liies die Aufgabe erneut und erkläre, wie du vorgehst, um die Aufgabe zu lösen.");
-		messages.put("Bitte lies die Aufgabe noch einmal gründlich durch.","Bitte liies die Aufgabe noch einmal gründlich durch.");
-		messages.put("Lies die Aufgabe erneut und prüfe deinen Bruch.","Liies die Aufgabe erneut und prüfe deinen Bruch.");
-		messages.put("Du brauchst zwei Brüche, um die Aufgabe zu bearbeiten: Zum einen brauchst du den Bruch  und zum anderen einen Bruch, der wertgleich zu  ist und  im Nenner stehen hat.","Du brauuchst zwei Brüche, um die Aufgabe zu bearbeiten: Zum einen brauuchst du den Bruch  und zum anderen einen Bruch, der wertgleich zu ist und im Nähnnähr stehen hat.");//?
-		messages.put("Wie kannst du in Fractions Lab prüfen, ob deine Lösung richtig ist?","Wie kannst du in freckt schensläpp prüfen, ob deine Lösung richtig ist?");
-		messages.put("Wenn du mehr Hilfe benötigst, um die Aufgabe zu bearbeiten, dann frage deinen Lehrer.","Wenn du mehr Hilfe benotigst, um die Aufgabe zu bearbeiten, dann frage deinen Lehrer.");
-		messages.put("Bitte lies die Aufgabe noch einmal gründlich durch.","Bitte liies die Aufgabe noch einmal gründlich durch.");
-		messages.put("Lies die Aufgabe erneut und prüfe dann deinen Bruch.","Liies die Aufgabe erneut und prüfe dann deinen Bruch.");
-		messages.put("Wie kannst du in Fractions Lab prüfen, ob deine Lösung richtig ist?","Wie kannst du in freckt schensläpp prüfen, ob deine Lösung richtig ist?");
-		messages.put("Sieh dir die Aufgabe an und überlege dir, welchen weiteren Bruch du brauchst, um ihn mit deinem Bruch zu vergleichen.","Siieh dir die Aufgabe an und übärlähge dir, welchen weiteren Bruch du brauuchst, um ihn mit deinem Bruch zu vergleichen.");
-		messages.put("Bitte lies die Aufgabe noch einmal gründlich durch.","Bitte Liies die Aufgabe noch einmal gründlich durch.");
-		messages.put("Lies die Aufgabe erneut und prüfe deinen Bruch.","Liies die Aufgabe erneut und prüfe deinen Bruch.");
-		messages.put("Bitte gebrauche für beide Brüche dasselbe Bilddiagramm (z.B. beides Mal ein Rechteck benutzen).","Bitte gebrauche für beide Brüche dasselbe Bilddiagramm (benutze z.B. beides Mal ein Rechtheck).");
-		messages.put("Wie kannst du in Fractions Lab prüfen, ob deine Lösung richtig ist?","Wie kannst du in freckt schensläpp prüfen, ob deine Lösung richtig ist?");
-		messages.put("Bitte erkläre, warum du zustimmst, oder warum nicht.","Bitte erkläre, warum du zuschtimst, oder warum nicht.");
-		messages.put("Bitte lies die Aufgabe noch einmal gründlich durch.","Bitte Liies die Aufgabe noch einmal gründlich durch.");
-		messages.put("Lies die Aufgabe erneut und prüfe deinen Bruch.","Liies die Aufgabe erneut und prüfe deinen Bruch.");
-		messages.put("Verändere jetzt den Zähler. Denke daran, dass du zwei Brüche erstellen musst, die addiert  ergeben.","Verändere jetzt den Zählähr. Denke daran, dass du zwei Brüche erstellen musst, die adiihrst ergeben.");
+		messages.put("Du gibst dir sehr viel Mï¿½he! Das ist sehr gut!","Du gybst dir sehr viel Mï¿½he! Das ist sehr gut!");
+		messages.put("Lies die Aufgabe erneut und erklï¿½re, wie du vorgehst, um die Aufgabe zu lï¿½sen.","Liies die Aufgabe erneut und erklï¿½re, wie du vorgehst, um die Aufgabe zu lï¿½sen.");
+		messages.put("Bitte lies die Aufgabe noch einmal grï¿½ndlich durch.","Bitte liies die Aufgabe noch einmal grï¿½ndlich durch.");
+		messages.put("Lies die Aufgabe erneut und prï¿½fe deinen Bruch.","Liies die Aufgabe erneut und prï¿½fe deinen Bruch.");
+		messages.put("Du brauchst zwei Brï¿½che, um die Aufgabe zu bearbeiten: Zum einen brauchst du den Bruch  und zum anderen einen Bruch, der wertgleich zu  ist und  im Nenner stehen hat.","Du brauuchst zwei Brï¿½che, um die Aufgabe zu bearbeiten: Zum einen brauuchst du den Bruch  und zum anderen einen Bruch, der wertgleich zu ist und im Nï¿½hnnï¿½hr stehen hat.");//?
+		messages.put("Wie kannst du in Fractions Lab prï¿½fen, ob deine Lï¿½sung richtig ist?","Wie kannst du in freckt schenslï¿½pp prï¿½fen, ob deine Lï¿½sung richtig ist?");
+		messages.put("Wenn du mehr Hilfe benï¿½tigst, um die Aufgabe zu bearbeiten, dann frage deinen Lehrer.","Wenn du mehr Hilfe benotigst, um die Aufgabe zu bearbeiten, dann frage deinen Lehrer.");
+		messages.put("Bitte lies die Aufgabe noch einmal grï¿½ndlich durch.","Bitte liies die Aufgabe noch einmal grï¿½ndlich durch.");
+		messages.put("Lies die Aufgabe erneut und prï¿½fe dann deinen Bruch.","Liies die Aufgabe erneut und prï¿½fe dann deinen Bruch.");
+		messages.put("Wie kannst du in Fractions Lab prï¿½fen, ob deine Lï¿½sung richtig ist?","Wie kannst du in freckt schenslï¿½pp prï¿½fen, ob deine Lï¿½sung richtig ist?");
+		messages.put("Sieh dir die Aufgabe an und ï¿½berlege dir, welchen weiteren Bruch du brauchst, um ihn mit deinem Bruch zu vergleichen.","Siieh dir die Aufgabe an und ï¿½bï¿½rlï¿½hge dir, welchen weiteren Bruch du brauuchst, um ihn mit deinem Bruch zu vergleichen.");
+		messages.put("Bitte lies die Aufgabe noch einmal grï¿½ndlich durch.","Bitte Liies die Aufgabe noch einmal grï¿½ndlich durch.");
+		messages.put("Lies die Aufgabe erneut und prï¿½fe deinen Bruch.","Liies die Aufgabe erneut und prï¿½fe deinen Bruch.");
+		messages.put("Bitte gebrauche fï¿½r beide Brï¿½che dasselbe Bilddiagramm (z.B. beides Mal ein Rechteck benutzen).","Bitte gebrauche fï¿½r beide Brï¿½che dasselbe Bilddiagramm (benutze z.B. beides Mal ein Rechtheck).");
+		messages.put("Wie kannst du in Fractions Lab prï¿½fen, ob deine Lï¿½sung richtig ist?","Wie kannst du in freckt schenslï¿½pp prï¿½fen, ob deine Lï¿½sung richtig ist?");
+		messages.put("Bitte erklï¿½re, warum du zustimmst, oder warum nicht.","Bitte erklï¿½re, warum du zuschtimst, oder warum nicht.");
+		messages.put("Bitte lies die Aufgabe noch einmal grï¿½ndlich durch.","Bitte Liies die Aufgabe noch einmal grï¿½ndlich durch.");
+		messages.put("Lies die Aufgabe erneut und prï¿½fe deinen Bruch.","Liies die Aufgabe erneut und prï¿½fe deinen Bruch.");
+		messages.put("Verï¿½ndere jetzt den Zï¿½hler. Denke daran, dass du zwei Brï¿½che erstellen musst, die addiert  ergeben.","Verï¿½ndere jetzt den Zï¿½hlï¿½hr. Denke daran, dass du zwei Brï¿½che erstellen musst, die adiihrst ergeben.");
 		messages.put("Du musst nun einen zweiten Bruch erstellen, der addiert mit deinem ersten Bruch so viel ergibt, wie der Bruch im Aufgabentext.","Du musst nun einen zweiten Bruch erstellen, der add i ert mit deinem ersten Bruch so viel ergibt, wie der Bruch im Aufgabentext.");
-		messages.put("Überlege dir, wie Brüche addiert werden. Was muss gleich sein, und was wird addiert?","Überlege dir, wie Brüche adiihrt werden. Was muss gleich sein, und was wird adiihrt?");
-		messages.put("Um zwei Brüche  zu addieren, müssen die Nenner gleich sein. Dann addierst du die Zähler.","Um zwei Brüche  zu adiihren, müssen die Nähnnähr gleich sein. Dann adiihrst du die Zählähr.");
-		messages.put("Wie kannst du in Fractions Lab prüfen, ob deine Lösung richtig ist?","Wie kannst du in freckt schensläpp prüfen, ob deine Lösung richtig ist?");
-		messages.put(" Überlege dir einen Bruch und stelle ihn als Zahlenstrahl, Rechteck, Messbecher und Form (z.B. Stern, Herz, Mond) dar.","Übärlähge dir einen Bruch und stelle ihn als Zahlenstrahl, Rechtheck, Mehsbächähr und Form (z.B. Stern, Herz, Mond) dar.");
-		messages.put("Erstelle einen Bruch, der wertgleich zum Bruch 7/3 ist. Benutze dafür den Messbecher. Prüfe, ob dein Bruch wertgleich zum Bruch 7/3 ist, indem du die Vergleichsfunktion (am Rand oben) nutzt.","Erstelle einen Bruch, der wertgleich zum Bruch siebendrittel ist. Benutze dafür Mehsbächähr. Prüfe, ob dein Bruch wertgleich zum Bruch siebendrittel ist, indem du die Vergleichsfunktion (am Rand oben) nutzt.");//?
-		messages.put("Erstelle einen Bruch, der wertgleich zum Bruch 1/2 ist. Benutze dafür Messbecher. Prüfe, ob dein Bruch wertgleich zum Bruch 1/2 ist, indem du die Vergleichsfunktion (am Rand oben) nutzt.","Erstelle einen Bruch, der wertgleich zum Bruch ein halb ist. Benutze dafür Mehsbächähr. Prüfe, ob dein Bruch wertgleich zum Bruch ein halb ist, indem du die Vergleichsfunktion (am Rand oben) nutzt.");//?
-		messages.put("Erstelle einen Bruch, der wertgleich zum Bruch 3/4 ist. Benutze dafür Messbecher. Prüfe, ob dein Bruch wertgleich zum Bruch 3/4 ist, indem du die Vergleichsfunktion (am Rand oben) nutzt.","Erstelle einen Bruch, der wertgleich zum Bruch dreiviertel ist. Benutze dafür Mehsbächähr. Prüfe, ob dein Bruch wertgleich zum Bruch dreiviertel ist, indem du die Vergleichsfunktion (am Rand oben) nutzt.");//?
-		messages.put("Erstelle einen Bruch, der wertgleich zum Bruch 7/3 ist. Benutze dafür Messbecher. Prüfe, ob dein Bruch wertgleich zum Bruch 7/3 ist, indem du die Vergleichsfunktion (am Rand oben) nutzt.","Erstelle einen Bruch, der wertgleich zum Bruch Siebendrittel ist. Benutze dafür Mehsbächähr. Prüfe, ob dein Bruch wertgleich zum Bruch Siebendrittel ist, indem du die Vergleichsfunktion (am Rand oben) nutzt.");//?
-		messages.put("Michael sagt: '3/4 = 1/12, weil 3 mal 4 ergibt 12.' Zeige mithilfe der Vergleichsfunktion (am Rand oben), ob du Michael zustimmst oder nicht.","Michael sagt: 'dreiviertel = einzwälftel, weil 3 mal 4 ergibt 12'. Zeige mithilfe der Vergleichsfunktion (am Rand oben), ob du Michael zuschtimst oder nicht.");
-		messages.put("Anna sagt: '2/5 = 1/10, weil 2 mal 5 ergibt 10.' Zeige mithilfe der Vergleichsfunktion (am Rand oben), ob du Michael zustimmst oder nicht.","Annna sagt: 'zweifünftel = einzehntel, weil 2 mal 5 ergibt 10' Zeige mithilfe der Vergleichsfunktion (am Rand oben), ob du Annna zuschtimst oder nicht.");
+		messages.put("ï¿½berlege dir, wie Brï¿½che addiert werden. Was muss gleich sein, und was wird addiert?","ï¿½berlege dir, wie Brï¿½che adiihrt werden. Was muss gleich sein, und was wird adiihrt?");
+		messages.put("Um zwei Brï¿½che  zu addieren, mï¿½ssen die Nenner gleich sein. Dann addierst du die Zï¿½hler.","Um zwei Brï¿½che  zu adiihren, mï¿½ssen die Nï¿½hnnï¿½hr gleich sein. Dann adiihrst du die Zï¿½hlï¿½hr.");
+		messages.put("Wie kannst du in Fractions Lab prï¿½fen, ob deine Lï¿½sung richtig ist?","Wie kannst du in freckt schenslï¿½pp prï¿½fen, ob deine Lï¿½sung richtig ist?");
+		messages.put(" ï¿½berlege dir einen Bruch und stelle ihn als Zahlenstrahl, Rechteck, Messbecher und Form (z.B. Stern, Herz, Mond) dar.","ï¿½bï¿½rlï¿½hge dir einen Bruch und stelle ihn als Zahlenstrahl, Rechtheck, Mehsbï¿½chï¿½hr und Form (z.B. Stern, Herz, Mond) dar.");
+		messages.put("Erstelle einen Bruch, der wertgleich zum Bruch 7/3 ist. Benutze dafï¿½r den Messbecher. Prï¿½fe, ob dein Bruch wertgleich zum Bruch 7/3 ist, indem du die Vergleichsfunktion (am Rand oben) nutzt.","Erstelle einen Bruch, der wertgleich zum Bruch siebendrittel ist. Benutze dafï¿½r Mehsbï¿½chï¿½hr. Prï¿½fe, ob dein Bruch wertgleich zum Bruch siebendrittel ist, indem du die Vergleichsfunktion (am Rand oben) nutzt.");//?
+		messages.put("Erstelle einen Bruch, der wertgleich zum Bruch 1/2 ist. Benutze dafï¿½r Messbecher. Prï¿½fe, ob dein Bruch wertgleich zum Bruch 1/2 ist, indem du die Vergleichsfunktion (am Rand oben) nutzt.","Erstelle einen Bruch, der wertgleich zum Bruch ein halb ist. Benutze dafï¿½r Mehsbï¿½chï¿½hr. Prï¿½fe, ob dein Bruch wertgleich zum Bruch ein halb ist, indem du die Vergleichsfunktion (am Rand oben) nutzt.");//?
+		messages.put("Erstelle einen Bruch, der wertgleich zum Bruch 3/4 ist. Benutze dafï¿½r Messbecher. Prï¿½fe, ob dein Bruch wertgleich zum Bruch 3/4 ist, indem du die Vergleichsfunktion (am Rand oben) nutzt.","Erstelle einen Bruch, der wertgleich zum Bruch dreiviertel ist. Benutze dafï¿½r Mehsbï¿½chï¿½hr. Prï¿½fe, ob dein Bruch wertgleich zum Bruch dreiviertel ist, indem du die Vergleichsfunktion (am Rand oben) nutzt.");//?
+		messages.put("Erstelle einen Bruch, der wertgleich zum Bruch 7/3 ist. Benutze dafï¿½r Messbecher. Prï¿½fe, ob dein Bruch wertgleich zum Bruch 7/3 ist, indem du die Vergleichsfunktion (am Rand oben) nutzt.","Erstelle einen Bruch, der wertgleich zum Bruch Siebendrittel ist. Benutze dafï¿½r Mehsbï¿½chï¿½hr. Prï¿½fe, ob dein Bruch wertgleich zum Bruch Siebendrittel ist, indem du die Vergleichsfunktion (am Rand oben) nutzt.");//?
+		messages.put("Michael sagt: '3/4 = 1/12, weil 3 mal 4 ergibt 12.' Zeige mithilfe der Vergleichsfunktion (am Rand oben), ob du Michael zustimmst oder nicht.","Michael sagt: 'dreiviertel = einzwï¿½lftel, weil 3 mal 4 ergibt 12'. Zeige mithilfe der Vergleichsfunktion (am Rand oben), ob du Michael zuschtimst oder nicht.");
+		messages.put("Anna sagt: '2/5 = 1/10, weil 2 mal 5 ergibt 10.' Zeige mithilfe der Vergleichsfunktion (am Rand oben), ob du Michael zustimmst oder nicht.","Annna sagt: 'zweifï¿½nftel = einzehntel, weil 2 mal 5 ergibt 10' Zeige mithilfe der Vergleichsfunktion (am Rand oben), ob du Annna zuschtimst oder nicht.");
 		messages.put("Amir sagt: '7/3 = 1/21, weil 7 mal 3 ergibt 21.' Zeige mithilfe der Vergleichsfunktion (am Rand oben), ob du Michael zustimmst oder nicht.","Amir sagt: 'Siebendrittel ist gleich eineinundzwanzigstel, weil sieben mal drei ergibt 21.'Zeige mithilfe der Vergleichsfunktion (am Rand oben), ob du Amir zuschtimst oder nicht.");//?
 	}
 	
@@ -62,5 +62,39 @@ public class MessagesConverter {
 		this.messages = messages;
 	}
 
-	
+    /**
+     * Takes a string and returns the same string without whitespace
+     * on the borders and with all whitespace normalised to length 1.
+     *
+     * For example " A    long space" becomes "A long space". 
+     *
+     * @param the string to normalise
+     * @return the same string with normalised whitespaces
+     */
+    public static String normaliseString(String string) {
+	  String str = string.trim();
+	  int length = str.length();
+	  char[] charArray = new char[length];
+	  boolean inWhitespace = false;
+	  int j = 0;
+	  for (int i = 0; i < length; i++) {
+		char c = str.charAt(i);
+		if (inWhitespace) {
+		    if (c == ' ') {
+			  continue;
+		    } else {
+			  charArray[j] = c;
+			  j++;
+			  inWhitespace = false;
+		    }
+		} else {
+		    if (c == ' ') {
+			  inWhitespace = true;			  
+		    }
+		    charArray[j] = c;
+		    j++;
+		}
+	  }
+	  return new String(charArray).trim();
+    }	
 }
