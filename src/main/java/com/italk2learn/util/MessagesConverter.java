@@ -79,21 +79,17 @@ public class MessagesConverter {
 	  int j = 0;
 	  for (int i = 0; i < length; i++) {
 		char c = str.charAt(i);
-		if (inWhitespace) {
-		    if (c == ' ') {
-			  continue;
-		    } else {
-			  charArray[j] = c;
-			  j++;
-			  inWhitespace = false;
-		    }
+		if (c == ' ') {
+			if (inWhitespace) {
+				continue;
+			} else {
+				inWhitespace = true;
+			}
 		} else {
-		    if (c == ' ') {
-			  inWhitespace = true;			  
-		    }
-		    charArray[j] = c;
-		    j++;
+			inWhitespace = false;			
 		}
+		charArray[j] = c;	
+		j++;
 	  }
 	  return new String(charArray).trim();
     }	
