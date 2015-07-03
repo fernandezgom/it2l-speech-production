@@ -40,7 +40,7 @@ public class SpeechProductionBO implements ISpeechProductionBO  {
 			while (it.hasNext()) {
 			    Map.Entry entry = (Map.Entry) it.next();
 			    String key = (String)entry.getKey();
-			    if (key.equals(request.getMessage())){
+			    if (key.equals(MessagesConverter.normaliseString(request.getMessage()))){
 			    	String value = (String)entry.getValue();
 			    	request.setMessage(value);
 			    }
