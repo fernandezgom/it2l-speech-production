@@ -61,6 +61,38 @@ public class MessagesConverter {
 	public void setMessages(HashMap<String, String> messages) {
 		this.messages = messages;
 	}
+	
+	/**
+     * Takes a string and returns the same string without whitespace
+     * on the borders and with all whitespace normalised to length 1.
+     *
+     * For example " A    long space" becomes "A long space". 
+     *
+     * @param the string to normalise
+     * @return the same string with normalised whitespaces
+     */
+    public static String normaliseString(String string) {
+	  String str = string.trim();
+	  int length = str.length();
+	  char[] charArray = new char[length];
+	  boolean inWhitespace = false;
+	  int j = 0;
+	  for (int i = 0; i < length; i++) {
+		char c = str.charAt(i);
+		if (c == ' ') {
+			if (inWhitespace) {
+				continue;
+			} else {
+				inWhitespace = true;
+			}
+		} else {
+			inWhitespace = false;			
+		}
+		charArray[j] = c;	
+		j++;
+	  }
+	  return new String(charArray).trim();
+    }	
 
 	
 }
