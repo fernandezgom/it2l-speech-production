@@ -32,15 +32,12 @@ public class MessagesConverter {
 		messages.put(normaliseString("Ist der Nenner in deinem Bruch richtig?"),"Ist der Nännähr in deinem Bruch richtig?");
 		messages.put(normaliseString("Klicke jetzt auf den 'nach oben' Pfeil neben dem  Bruch, um den Nenner zu verändern."),"Klicke jetzt auf den 'nach oben' Pfeil neben dem  Bruch, um den Nännähr zu verändern.");
 		messages.put(normaliseString("Prüfe, ob der Nenner in deinem Bruch richtig ist."),"Prüfe, ob der Nännähr in deinem Bruch richtig ist.");
-		//messages.put(normaliseString("Bitte prüfe, ob der Nenner (das was unten im Bruch steht)" +endDenominator+ ist."),"Bitte prüfe, ob der Nännähr (das was unten im Bruch steht)" +endDenominator+ ist.");
 		messages.put(normaliseString("Hast du den Zähler oder den Nenner verändert?"),"Hast du den Zählehr oder den Nännähr verändert?");
 		messages.put(normaliseString("Erinnere dich: Der Nenner steht unten im Bruch."),"Erinnere dich: Der Nännähr steht unten im Bruch.");
 		messages.put(normaliseString("Prüfe, ob du den Nenner und nicht den Zähler verändert hast."),"Prüfe, ob du den Nännähr und nicht den Zählehr verändert hast.");
-		//messages.put(normaliseString("Bitte prüfe, ob der Nenner und nicht der Zähler deines Bruches " +endDenominator+ ist."),"Bitte prüfe, ob der Nännähr und nicht der Zählehr deines Bruches " +endDenominator+ ist.");
 		messages.put(normaliseString("Hast du den Zähler oder den Nenner verändert?"),"Hast du den Zählehr oder den Nännähr verändert?");
 		messages.put(normaliseString("Erinnere dich: Der Nenner steht unten im Bruch."),"Erinnere dich: Der Nännähr steht unten im Bruch.");
 		messages.put(normaliseString("Überprüfe, ob du den Nenner, und nicht den Zähler verändert hast."),"Üüberprüfe, ob du den Nännähr, und nicht den Zählehr verändert hast.");
-		//messages.put(normaliseString("Prüfe, dass der Nenner deines Bruches "+endDenominator+" ist, und nicht der Zähler."),"Prüfe, dass der Nännähr deines Bruches "+endDenominator+" ist, und nicht der Zählehr.");
 		messages.put(normaliseString("Ist das der Bruch, den du machen wolltest?"),"Ist das der Bruch den du machen wolltest?");
 		messages.put(normaliseString("Bitte lies die Aufgabe noch einmal gründlich durch."),"Bitte liies die Aufgabe noch einmal gründlich durch.");
 		messages.put(normaliseString("Lies die Aufgabe erneut und prüfe deinen Bruch."),"Liies die Aufgabe erneut und prüfe deinen Bruch.");
@@ -48,11 +45,9 @@ public class MessagesConverter {
 		messages.put(normaliseString("Hast du den Zähler oder den Nenner verändert?"),"Hast du den Zählehr oder den Nännähr verändert?");
 		messages.put(normaliseString("Der Nenner ist der untere Teil des Bruchs."),"Der Nännähr ist der untere Teil des Bruchs.");
 		messages.put(normaliseString("Du hast den Zähler verändert. Du musst jedoch den Nenner verändern."),"Du hast den Zählehr verändert. Du musst jedoch den Nännähr verändern.");
-		//messages.put(normaliseString("Du hast den Zähler verändert. Du musst den Nenner auf "+endDenominator+"einstellen."),"Du hast den Zählehr verändert. Du musst den Nännähr auf "+endDenominator+"einstellen.");
 		messages.put(normaliseString("Hast du den Zähler oder den Nenner verändert?"),"Hast du den Zählehr oder den Nännähr verändert?");
 		messages.put(normaliseString("Der Nenner ist der untere Teil des Bruchs."),"Der Nännähr ist der untere Teil des Bruchs.");
 		messages.put(normaliseString("Du hast den Zähler verändert. Du musst jedoch den Nenner verändern."),"Du hast den Zählehr verändert. Du musst jedoch den Nännähr verändern.");
-		//messages.put(normaliseString("Du hast den Zähler verändert. Du musst den Nenner auf  "+endDenominator+" einstellen."),"Du hast den Zählehr verändert. Du musst den Nännähr auf "+endDenominator+"einstellen.");
 		messages.put(normaliseString("Sehr gut! Wie veränderst du den Zähler?"),"Sehr gut! Wie verändeerßt du den Zählehr?");
 		messages.put(normaliseString("Wenn du neben den oberen Teil des Bruchs klickst, und dann den 'nach oben' Pfeil benutzt, kannst du den Zähler des Bruchs (das was oben steht) verändern."),"Wenn du neben den oberen Teil des Bruchs klickst, und dann den 'nach oben' Pfeil benutzt, kannst du den Zählehr des Bruchs (das was oben steht) verändern.");
 		messages.put(normaliseString("Du hast den Nenner verändert. Jetzt musst du den Zähler verändern."),"Du hast den Nännähr verändert. Jetzt musst du den Zählehr verändern.");
@@ -68,7 +63,6 @@ public class MessagesConverter {
 		messages.put(normaliseString("Sehr gut! Wie wirst du einen wertgleichen Bruch erstellen?"),"Sehr gut! Wie wirst du einen wertgleichen Bruch erstellen?");
 		messages.put(normaliseString("Du könntest den Bruch kopieren und im Menü die Funktion 'Finde einen wertgleichen Bruch' benutzen, um einen wertgleichen Bruch zu finden. Klicke mit der rechten Maustaste auf deinen Bruch."),"Du könntest den Bruch kopieren und im Menü die Funktion 'Finde einen wertgleichen Bruch' benutzen, um einen wertgleichen Bruch zu finden. Klicke mit der rechten Mausstaste auf deinen Bruch.");
 		messages.put(normaliseString("Sehr gut! Kopiere jetzt diesen Bruch und benutze im Menü die Funktion 'Finde einen wertgleichen Bruch', um deinen Bruch zu verändern. Klicke dazu mit der rechten Maustaste auf deinen Bruch."),"Sehr gut! Kopiere jetzt diesen Bruch und benutze im Menü die Funktion \"Finde einen wertgleichen Bruch\", um deinen Bruch zu verändern. Klicke dazu mit der rechten Mausstaste auf deinen Bruch.");
-		//messages.put(normaliseString("Sehr gut! Klicke jetzt mit der rechten Maustaste auf den Bruch und kopiere ihn. Klicke danach mit der rechten Maustaste auf den kopierten Bruch und wähle im Menü die Funktion 'Finde einen wertgleichen Bruch', um einen wertgleichen Bruch mit "+endDenominator+" im Nenner zu erstellen."),"Sehr gut! Klicke jetzt mit der rechten Mausstaste auf den Bruch und kopiere ihn. Klicke danach mit der rechten Mausstaste auf den koopierten Bruch und wähle im Menü 'Finde einen wertgleichen Bruch mit im Nännähr zu erstellen.);
 		messages.put(normaliseString("Warum hast du dich entschieden, ein anderes Bilddiagramm zu benutzen? Was sollst du in dieser Aufgabe machen?"),"Warum hast du dich ent schiehden, ein anderes Bilddiagramm zu benutzen?");
 		messages.put(normaliseString("Bitte benutze das gleiche Bilddiagramm für den zweiten Bruch."),"Bitte benutze das gleiche Bilddiagramm für den zweiten Bruch.");
 		messages.put(normaliseString("Bitte erstelle einen zweiten Bruch und benutze dafür das gleiche Bilddiagramm wie beim ersten Bruch."),"Bitte erstelle einen zweiten Bruch und benutze dafür das gleiche Bilddiagramm wie beim ersten Bruch.");
@@ -90,7 +84,6 @@ public class MessagesConverter {
 		messages.put(normaliseString("Womit wirst du deinen Bruch vergleichen?"),"Womit wirst du deinen Bruch vergleichen?");
 		messages.put(normaliseString("Bei wertgleichen Brüchen sind die Zähler und Nenner des einen Bruches das gleiche Vielfache des anderen Bruches."),"Bei wertgleichen Brüchen sind die Zählehr und Nännähr des einen Bruches das gleiche Vielfache des anderen Bruches.");
 		//messages.put(normaliseString("Erstelle zuerst einen weiteren Bruch und zwar "+startNumerator+"/"+startDenominator+". Vergleiche dann die beiden Brüche."),"Erstelle zuerst einen weiteren Bruch und zwar "+startNumerator+"/"+startDenominator+". Vergleiche dann die beiden Brüche.");
-		//messages.put(normaliseString("Sehr gut! Erkläre nun, warum du im Nenner "+endDenominator+" stehen hast."),"Sehr gut! Erkläre nun, warum du im Nännähr "+endDenominator+" stehen hast.");
 		messages.put(normaliseString("Wie kannst du in Fractions Lab prüfen, ob deine Lösung richtig ist?"),"Wie kannst du in freckt schensläpp prüfen, ob deine Lösung richtig ist?");
 		messages.put(normaliseString("Du könntest die Vergleichsfunktion benutzen, um deine Brüche zu vergleichen."),"Du könntest die Vergleichsfunktion benutzen, um deine Brüche zu vergleichen.");
 		messages.put(normaliseString("Vergleiche die Brüche mithilfe der Vergleichsfunktion."),"Vergleiche die Brüche mithilfe der Vergleichsfunktion.");
@@ -141,11 +134,9 @@ public class MessagesConverter {
 		messages.put(normaliseString("Ist der Nenner deines Bruches richtig?"),"Ist der Nännähr deines Bruches richtig?");
 		messages.put(normaliseString("Du kannst auf den Pfeil neben deinem Bruch klicken, um ihn zu verändern."),"Du kannst auf den Pfeil neben deinem Bruch klicken, um ihn zu verändern.");
 		messages.put(normaliseString("Prüfe ob der Nenner deines Bruchs richtig ist."),"Prüfe ob der Nännähr deines Bruchs richtig ist.");
-		//messages.put(normaliseString("Prüfe, dass der Nenner  deines Bruches"+startDenominator+" ist."),"Prüfe, dass der Nännähr  deines Bruches"+startDenominator+" ist.");
 		messages.put(normaliseString("Hast du den Zähler oder den Nenner verändert?"),"Hast du den Zählehr oder den Nännähr verändert?");
 		messages.put(normaliseString("Denk daran: Der Nenner ist der untere Teil des Bruchs."),"Denk daran: Der Nännähr ist der untere Teil des Bruchs.");
 		messages.put(normaliseString("Überprüfe, ob du den Nenner, und nicht den Zähler verändert hast."),"Überprüfe, ob du den Nännähr, und nicht den Zählehr verändert hast.");
-		//messages.put(normaliseString("Prüfe, dass der Nenner deines Bruches  "+startDenominator+" ist, und nicht der Zähler."),"Prüfe, dass der Nännähr deines Bruches  "+startDenominator+" ist, und nicht der Zählehr.");
 		messages.put(normaliseString("Ist das der Bruch, den du machen wolltest?"),"Ist das der Bruch, den du machen wolltest?");
 		messages.put(normaliseString("Bitte lies die Aufgabe noch einmal gründlich durch."),"Bitte lies die Aufgabe noch einmal gründlich durch.");
 		messages.put(normaliseString("Lies die Aufgabe erneut und prüfe dann deinen Bruch."),"Lies die Aufgabe erneut und prüfe dann deinen Bruch.");
@@ -153,7 +144,6 @@ public class MessagesConverter {
 		messages.put(normaliseString("Hast du den Zähler oder den Nenner verändert?"),"Hast du den Zählehr oder den Nännähr verändert?");
 		messages.put(normaliseString("Der Nenner ist der untere Teil des Bruchs."),"Der Nännähr ist der untere Teil des Bruchs.");
 		messages.put(normaliseString("Du hast den Zähler verändert. Du musst jedoch den Nenner verändern."),"Du hast den Zählehr verändert. Du musst jedoch den Nännähr verändern.");
-		//messages.put(normaliseString("Du hast den Zähler verändert. Du musst den Nenner auf "+startDenominator+" einstellen."),"Du hast den Zählehr verändert. Du musst den Nännähr auf "+endDenominator+"einstellen.");
 		messages.put(normaliseString("Sehr gut! Wie wirst du den Zähler verändern?"),"Sehr gut! Wie wirst du den Zählehr verändern?");
 		messages.put(normaliseString("Wenn du neben den oberen Teil des Bruchs klickst, und dann den 'nach oben' Pfeil benutzt, kannst du den Zähler des Bruchs (das was oben steht) verändern."),"Wenn du neben den oberen Teil des Bruchs klickst, und dann den 'nach oben' Pfeil benutzt, kannst du den Zählehr des Bruchs (das was oben steht) verändern.");
 		messages.put(normaliseString("Du hast den Zähler verändert. Du musst jedoch den Nenner verändern."),"Du hast den Zählehr verändert. Du musst jedoch den Nännähr verändern.");
@@ -168,7 +158,6 @@ public class MessagesConverter {
 		messages.put(normaliseString("Mit welchem anderen Bruch willst du deinen Bruch vergleichen?"),"Mit welchem anderen Bruch willst du deinen Bruch vergleichen?");
 		messages.put(normaliseString("Bei wertgleichen Brüchen sind die Zähler und Nenner des einen Bruches das (gleiche) Vielfache des anderen Bruches."),"Bei wertgleichen Brüchen sind die Zählehr und Nännähr des einen Bruches das (gleiche) Vielfache des anderen Bruches.");
 		//messages.put(normaliseString("Erstelle zuerst einen weiteren Bruch, dieses Mal "+startNumerator+"/"+startDenominator+". Vergleiche dann deine beiden Brüche."),"Erstelle zuerst einen weiteren Bruch, dieses Mal "+startNumerator+"/"+startDenominator+". Vergleiche dann deine beiden Brüche.");
-		//messages.put(normaliseString("Sehr gut! Bitte erkläre, warum du den Nenner "+startDenominator+" oder ein Vielfaches von "+startDenominator+" gewählt hast."),"Sehr gut! Bitte erkläre, warum du den Nännähr "+startDenominator+" oder ein Vielfaches von "+startDenominator+" gewählt hast.");
 		messages.put(normaliseString("Wie kannst du in Fractions Lab prüfen, ob deine Lösung richtig ist?"),"Wie kannst du in  freckt schensläpp prüfen, ob deine Lösung richtig ist?");
 		messages.put(normaliseString("Du könntest die Vergleichsfunktion (am Rand oben) benutzen, um deine Brüche zu vergleichen."),"Du könntest die Vergleichsfunktion (am Rand oben) benutzen, um deine Brüche zu vergleichen.");
 		messages.put(normaliseString("Vergleiche die beiden Brüche, indem du die Vergleichsfunktion (am Rand oben) benutzt."),"Vergleiche die beiden Brüche, indem du die Vergleichsfunktion (am Rand oben) benutzt.");
@@ -185,11 +174,9 @@ public class MessagesConverter {
 		messages.put(normaliseString("Du kannst auf den Pfeil neben deinem Bruch klicken, um ihn zu verändern."),"Du kannst auf den Pfeil neben deinem Bruch klicken, um ihn zu verändern.");
 		messages.put(normaliseString("Ist der Nenner in deinem Bruch richtig?"),"Ist der Nännähr in deinem Bruch richtig?");
 		messages.put(normaliseString("Prüfe, ob der Nenner in deinem Bruch richtig ist."),"Prüfe, ob der Nännähr in deinem Bruch richtig ist.");
-		//messages.put(normaliseString("Bitte prüfe, ob der Nenner (das was unten im Bruch steht) "+startDenominator+" oder "+endDenominator+" ist."),"Bitte prüfe, ob der Nännähr (das was unten im Bruch steht) "+startDenominator+" oder "+endDenominator+" ist.");
 		messages.put(normaliseString("Denk daran: Der Nenner steht unten im Bruch."),"Denk daran: Der Nännähr steht unten im Bruch.");
 		messages.put(normaliseString("Hast du den Zähler oder den Nenner verändert?"),"Hast du den Zählehr oder den Nännähr verändert?");
 		messages.put(normaliseString("Überprüfe, ob du den Nenner, und nicht den Zähler verändert hast."),"Überprüfe, ob du den Nännähr, und nicht den Zählehr verändert hast.");
-		//messages.put(normaliseString("Prüfe, dass der Nenner deines Bruches "+startDenominator+" oder "+endDenominator+" ist, und nicht der Zähler."),"Prüfe, dass der Nännähr deines Bruches "+startDenominator+" oder "+endDenominator+" ist, );
 		messages.put(normaliseString("Bitte lies die Aufgabe noch einmal gründlich durch."),"Bitte lies die Aufgabe noch einmal gründlich durch.");
 		messages.put(normaliseString("Ist das wirklich der Bruch, den du machen wolltest?"),"Ist das wirklich der Bruch, den du machen wolltest?");
 		messages.put(normaliseString("Lies die Aufgabe erneut und prüfe deinen Bruch."),"Lies die Aufgabe erneut und prüfe deinen Bruch.");
@@ -197,7 +184,6 @@ public class MessagesConverter {
 		messages.put(normaliseString("Der Nenner ist der untere Teil des Bruchs."),"Der Nännähr ist der untere Teil des Bruchs.");
 		messages.put(normaliseString("Hast du den Zähler oder den Nenner verändert?"),"Hast du den Zählehr oder den Nännähr verändert?");
 		messages.put(normaliseString("Du hast den Zähler verändert. Du musst jedoch den Nenner verändern."),"Du hast den Zählehr verändert. Du musst jedoch den Nännähr verändern.");
-		//messages.put(normaliseString("Du hast den Zähler verändert. Du musst den Nenner in "+startDenominator+" oder "+endDenominator+" ändern."),"Du hast den Zählehr verändert. Du musst den Nännähr in "+startDenominator+" oder "+endDenominator+" ändern.");
 		messages.put(normaliseString("Wenn du neben den oberen Teil des Bruchs klickst, und dann den 'nach oben' Pfeil benutzt, kannst du den Zähler des Bruchs (das was oben steht) verändern."),"Wenn du neben den oberen Teil des Bruchs klickst, und dann den 'nach oben' Pfeil benutzt, kannst du den Zählehr des Bruchs (das was oben steht) verändern.");
 		messages.put(normaliseString("Sehr gut! Wie wirst du den Zähler verändern?"),"Sehr gut! Wie wirst du den Zählehr verändern?");
 		messages.put(normaliseString("Du hast den Nenner verändert. Jetzt musst du den Zähler verändern."),"Du hast den Nännähr verändert. Jetzt musst du den Zählehr verändern.");
@@ -226,11 +212,9 @@ public class MessagesConverter {
 		messages.put(normaliseString("Ist der Nenner deines Bruches richtig?"),"Ist der Nännähr deines Bruches richtig?");
 		messages.put(normaliseString("Du kannst auf den Pfeil neben deinem Bruch klicken, um ihn zu verändern."),"Du kannst auf den Pfeil neben deinem Bruch klicken, um ihn zu verändern.");
 		messages.put(normaliseString("Prüfe ob der Nenner deines Bruchs richtig ist."),"Prüfe ob der Nännähr deines Bruchs richtig ist.");
-		//messages.put(normaliseString("Bitte prüfe, ob der Nenner (das was unten im Bruch steht) "+startDenominator+" ist."),"Bitte prüfe, ob der Nännähr (das was unten im Bruch steht) "+startDenominator+" ist.");
 		messages.put(normaliseString("Hast du den Zähler oder den Nenner verändert?"),"Hast du den Zählehr oder den Nännähr verändert?");
 		messages.put(normaliseString("Erinnere dich: Der Nenner steht unten im Bruch."),"Erinnere dich: Der Nännähr steht unten im Bruch.");
 		messages.put(normaliseString("Prüfe, ob du den Nenner und nicht den Zähler verändert hast."),"Prüfe, ob du den Nännähr und nicht den Zählehr verändert hast.");
-		//messages.put(normaliseString("Bitte prüfe, ob der Nenner deines Bruches "+startDenominator+" ist und nicht der Zähler deines Bruches.")," Bitte prüfe, ob der Nännähr deines Bruches "+startDenominator+" ist und nicht der Zählehr deines Bruches.");
 		messages.put(normaliseString("Ist das wirklich der Bruch, den du machen wolltest?"),"Ist das wirklich der Bruch, den du machen wolltest?");
 		messages.put(normaliseString("Bitte lies die Aufgabe noch einmal gründlich durch."),"Bitte liies die Aufgabe noch einmal gründlich durch.");
 		messages.put(normaliseString("Lies die Aufgabe erneut und prüfe deinen Bruch."),"Liies die Aufgabe erneut und prüfe deinen Bruch.");
@@ -238,7 +222,6 @@ public class MessagesConverter {
 		messages.put(normaliseString("Hast du den Zähler oder den Nenner verändert?"),"Hast du den Zählehr oder den Nännähr verändert?");
 		messages.put(normaliseString("Der Nenner ist der untere Teil des Bruchs."),"Der Nännähr ist der untere Teil des Bruchs.");
 		messages.put(normaliseString("Du hast den Zähler verändert. Du musst jedoch den Nenner verändern."),"Du hast den Zählehr verändert. Du musst jedoch den Nännähr verändern.");
-		//messages.put(normaliseString("Du hast den Zähler verändert. Du musst den Nenner auf "+startDenominator+" einstellen."),"Du hast den Zählehr verändert. Du musst den Nännähr auf "+startDenominator+" einstellen.");
 		messages.put(normaliseString("Sehr gut! Wie wirst du den Zähler verändern?"),"Sehr gut! Wie wirst du den Zählehr verändern?");
 		messages.put(normaliseString("Wenn du neben den oberen Teil des Bruchs klickst, und dann den 'nach oben' Pfeil benutzt, kannst du den Zähler des Bruchs (das was oben steht) verändern."),"Wenn du neben den oberen Teil des Bruchs klickst, und dann den 'nach oben' Pfeil benutzt, kannst du den Zählehr des Bruchs (das was oben steht) verändern.");
 		messages.put(normaliseString("Prüfe, ob du den Nenner und nicht den Zähler verändert hast."),"Prüfe, ob du den Nännähr und nicht den Zählehr verändert hast.");
@@ -247,12 +230,39 @@ public class MessagesConverter {
 		messages.put(normaliseString("Du musst nun einen zweiten Bruch erstellen, der addiert mit deinem ersten Bruch so viel ergibt, wie der Bruch im Aufgabentext."),"Du musst nun einen zweiten Bruch erstellen, der add i ert mit deinem ersten Bruch so viel ergibt, wie der Bruch im Aufgabentext.");
 		messages.put(normaliseString("Überlege dir, wie Brüche addiert werden. Was muss gleich sein, und was wird addiert?"),"Überlege dir, wie Brüche adiihrt werden. Was muss gleich sein, und was wird adiihrt?");
 		messages.put(normaliseString("Um zwei Brüche  zu addieren, müssen die Nenner gleich sein. Dann addierst du die Zähler."),"Um zwei Brüche  zu adiihren, müssen die Nännähr gleich sein. Dann  adiihren du die Zählehr.");
-		//messages.put(normaliseString("Sehr gut! Erkläre nun, warum du im Nenner "+startDenominator+"stehen hast."),"Sehr gut! Erkläre nun, warum du im Nännähr "+startDenominator+"stehen hast.");
 		messages.put(normaliseString("Wie kannst du in Fractions Lab prüfen, ob deine Lösung richtig ist?"),"Wie kannst du in  freckt schensläpp prüfen, ob deine Lösung richtig ist?");
 		messages.put(normaliseString("Du kannst deine Brüche addieren, indem du die Additionsbox benutzt."),"Du kannst deine Brüche adiihren,, indem du die Additionsbocks benutzt.");
 		messages.put(normaliseString("Addiere deine Brüche mithilfe der Additionsbox."),"Addiere deine Brüche mithilfe der Additionsbocks.");
 		messages.put(normaliseString("Das hast du dir gut erarbeitet! Toll gemacht!"),"Das hast du dir gut erarbeitet! Toll gemacht!");
 		messages.put(normaliseString("Bitte erkläre, wie du die Aufgabe beantwortet hast. Warum hast du diese Brüche erstellt?"),"Bitte erkläre, wie du die Aufgabe beantwortet hast. Warum hast du diese Brüche erstellt?");
+
+		for (int startDenominator=1;startDenominator<21;startDenominator++) {
+			messages.put(normaliseString("Sehr gut! Erkläre nun, warum du im Nenner "+startDenominator+"stehen hast."),"Sehr gut! Erkläre nun, warum du im Nännähr "+startDenominator+"stehen hast.");
+			messages.put(normaliseString("Du hast den Zähler verändert. Du musst den Nenner auf "+startDenominator+" einstellen."),"Du hast den Zählehr verändert. Du musst den Nännähr auf "+startDenominator+" einstellen.");
+			messages.put(normaliseString("Bitte prüfe, ob der Nenner deines Bruches "+startDenominator+" ist und nicht der Zähler deines Bruches.")," Bitte prüfe, ob der Nännähr deines Bruches "+startDenominator+" ist und nicht der Zählehr deines Bruches.");
+			messages.put(normaliseString("Bitte prüfe, ob der Nenner (das was unten im Bruch steht) "+startDenominator+" ist."),"Bitte prüfe, ob der Nännähr (das was unten im Bruch steht) "+startDenominator+" ist.");
+			messages.put(normaliseString("Sehr gut! Bitte erkläre, warum du den Nenner "+startDenominator+" oder ein Vielfaches von "+startDenominator+" gewählt hast."),"Sehr gut! Bitte erkläre, warum du den Nännähr "+startDenominator+" oder ein Vielfaches von "+startDenominator+" gewählt hast.");
+			messages.put(normaliseString("Du hast den Zähler verändert. Du musst den Nenner auf "+startDenominator+" einstellen."),"Du hast den Zählehr verändert. Du musst den Nännähr auf "+startDenominator+"einstellen.");
+			messages.put(normaliseString("Prüfe, dass der Nenner deines Bruches  "+startDenominator+" ist, und nicht der Zähler."),"Prüfe, dass der Nännähr deines Bruches  "+startDenominator+" ist, und nicht der Zählehr.");
+			messages.put(normaliseString("Prüfe, dass der Nenner  deines Bruches"+startDenominator+" ist."),"Prüfe, dass der Nännähr  deines Bruches"+startDenominator+" ist.");
+			messages.put(normaliseString("Sehr gut! Erkläre nun, warum du im Nenner "+startDenominator+" stehen hast."),"Sehr gut! Erkläre nun, warum du im Nännähr "+startDenominator+" stehen hast.");
+			messages.put(normaliseString("Sehr gut! Klicke jetzt mit der rechten Maustaste auf den Bruch und kopiere ihn. Klicke danach mit der rechten Maustaste auf den kopierten Bruch und wähle im Menü die Funktion 'Finde einen wertgleichen Bruch', um einen wertgleichen Bruch mit "+startDenominator+" im Nenner zu erstellen."),
+					                     "Sehr gut! Klicke jetzt mit der rechten Mausstaste auf den Bruch und kopiere ihn. Klicke danach mit der rechten Mausstaste auf den koopierten Bruch und wähle im Menü 'Finde einen wertgleichen Bruch mit im Nännähr zu erstellen.");
+			messages.put(normaliseString("Du hast den Zähler verändert. Du musst den Nenner auf  "+startDenominator+" einstellen."),"Du hast den Zählehr verändert. Du musst den Nännähr auf "+startDenominator+"einstellen.");
+			messages.put(normaliseString("Du hast den Zähler verändert. Du musst den Nenner auf "+startDenominator+"einstellen."),"Du hast den Zählehr verändert. Du musst den Nännähr auf "+startDenominator+"einstellen.");
+			messages.put(normaliseString("Prüfe, dass der Nenner deines Bruches "+startDenominator+" ist, und nicht der Zähler."),"Prüfe, dass der Nännähr deines Bruches "+startDenominator+" ist, und nicht der Zählehr.");
+			messages.put(normaliseString("Bitte prüfe, ob der Nenner und nicht der Zähler deines Bruches " +startDenominator+ "ist."),"Bitte prüfe, ob der Nännähr und nicht der Zählehr deines Bruches " +startDenominator+ "ist.");
+			messages.put(normaliseString("Bitte prüfe, ob der Nenner (das was unten im Bruch steht)" +startDenominator+ "ist."),"Bitte prüfe, ob der Nännähr (das was unten im Bruch steht)" +startDenominator+ "ist.");
+
+		}
+		for (int startDenominator=1;startDenominator<21;startDenominator++) {
+			for (int endDenominator=1;endDenominator<21;endDenominator++) {
+				messages.put(normaliseString("Prüfe, dass der Nenner deines Bruches "+startDenominator+" oder "+endDenominator+" ist, und nicht der Zähler."),"Prüfe, dass der Nännähr deines Bruches "+startDenominator+" oder "+endDenominator+" ist,");
+				messages.put(normaliseString("Bitte prüfe, ob der Nenner (das was unten im Bruch steht) "+startDenominator+" oder "+endDenominator+" ist."),"Bitte prüfe, ob der Nännähr (das was unten im Bruch steht) "+startDenominator+" oder "+endDenominator+" ist.");
+				messages.put(normaliseString("Du hast den Zähler verändert. Du musst den Nenner in "+startDenominator+" oder "+endDenominator+" ändern."),"Du hast den Zählehr verändert. Du musst den Nännähr in "+startDenominator+" oder "+endDenominator+" ändern.");
+
+			}
+		}
 
 	}
 	
@@ -262,6 +272,25 @@ public class MessagesConverter {
 
 	public void setMessages(HashMap<String, String> messages) {
 		this.messages = messages;
+	}
+	
+	
+	/**
+     * Takes a string and returns the same string where fractions in digits are replaced as fractions in texts
+     *
+     *	For example input:"please make 1/2" retrieves output "please make one half". 
+     *
+     * @param the string to convert
+     * @return string
+     */
+	public String replaceFractions(String message) {
+		  int length = message.length();
+		  boolean inFraction = false;
+		  for (int i = 0; i < length; i++) {
+			char c = message.charAt(i);
+			//if ()
+		  }
+		return "";
 	}
 	
 	/**
