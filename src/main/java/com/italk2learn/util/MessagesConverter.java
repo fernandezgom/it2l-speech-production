@@ -1,9 +1,26 @@
 package com.italk2learn.util;
 
+import static java.lang.Character.isDigit;
 import java.util.HashMap;
 import java.util.Map;
 
 public class MessagesConverter {
+	
+	public enum Language {
+		  DE,
+		  EN, 
+		  ES,
+		  ;
+	    }
+
+	public enum State {
+		  LOOKING_FOR_NUMERATOR,
+	      READING_NUMERATOR,
+		  LOOKING_FOR_SLASH,
+	      LOOKING_FOR_DENOMINATOR,
+	      READING_DENOMINATOR,
+	      ;
+	}
 	
 	private Map<String, String> messages= new HashMap<String, String>();
 	
@@ -276,24 +293,169 @@ public class MessagesConverter {
 	
 	
 	/**
-     * Takes a string and returns the same string where fractions in digits are replaced as fractions in texts
-     *
-     *	For example input:"please make 1/2" retrieves output "please make one half". 
-     *
-     * @param the string to convert
-     * @return string
+     * Parses a string such as "Now create 1/ 4 and 3 / 8..." and 
+     * returns a string such as "Now create one quarter and three eights...".
+     * 
+     * @param msg a string such as "Now create 1/ 4 and 3 / 8..." 
+     * @param lang the language (for translating the fractions)
+     * @return a string such as "Now create one quarter and three eights...".
      */
-	public String replaceFractions(String message) {
-		  int length = message.length();
-		  boolean inFraction = false;
-		  for (int i = 0; i < length; i++) {
-			char c = message.charAt(i);
-			//if ()
-		  }
-		return "";
-	}
-	
-	/**
+    public static String transformFractionsInString(String msg, Language lang) {
+	  String result = "";
+	  String auxNum = null;
+	  int numerator = -1;
+	  int denominator = -1;
+	  State state = State.LOOKING_FOR_NUMERATOR;
+	  msg += " "; // add a blank to avoid processing last char in ad-hoc manner
+	  for (int i = 0; i < msg.length(); i++) {
+		char c = msg.charAt(i);
+		switch (state) {
+		case LOOKING_FOR_NUMERATOR: 
+		    if (isDigit(c)) {
+			  auxNum = "" + c;
+			  state = State.READING_NUMERATOR;
+		    } else {
+			  result += c;
+		    }
+		    break;
+		case READING_NUMERATOR: 
+		    if (isDigit(c)) {
+			  auxNum += c;
+		    } else {
+			  if (c == '/' || c == ' ') {
+				numerator = Integer.parseInt(auxNum);
+				if (c == '/') {
+				    state = State.LOOKING_FOR_DENOMINATOR;
+				} else {
+				    state = State.LOOKING_FOR_SLASH;
+				}
+			  } else {
+				result += auxNum + c;
+				state = State.READING_NUMERATOR;
+			  }
+		    }
+		    break;
+		case LOOKING_FOR_SLASH: 
+		    if (c == '/') {
+			  state = State.LOOKING_FOR_DENOMINATOR;
+		    } else if (c != ' ') {
+			  result += "" + numerator + c;
+			  state = State.LOOKING_FOR_NUMERATOR;
+		    }
+		    break;
+		case LOOKING_FOR_DENOMINATOR: 
+		    if (isDigit(c)) {
+			  auxNum = "" + c;
+			  state = State.READING_DENOMINATOR;
+		    } else if (c != ' ') {
+			  result += "" + numerator + c;
+			  state = State.LOOKING_FOR_NUMERATOR;
+		    }
+		    break;
+		case READING_DENOMINATOR: 
+		    if (isDigit(c)) {
+			  auxNum += c;
+		    } else {
+			  denominator = Integer.parseInt(auxNum);
+			  result += transformFractions(numerator, denominator, lang) + c;
+			  state = State.LOOKING_FOR_NUMERATOR;
+		    }
+		    break;
+		default: 
+		    throw new IllegalStateException("This should never happen: " + state);
+		}
+	  }
+	  return result.trim();
+    }
+    
+    public boolean containFraction(String msg){
+  	  State state = State.LOOKING_FOR_NUMERATOR;
+  	  msg += " "; // add a blank to avoid processing last char in ad-hoc manner
+  	  for (int i = 0; i < msg.length(); i++) {
+  		char c = msg.charAt(i);
+  		switch (state) {
+  		case LOOKING_FOR_NUMERATOR: 
+  		    if (isDigit(c)) {
+  			  state = State.READING_NUMERATOR;
+  		    } 
+  		    break;
+  		case READING_NUMERATOR: 
+  		    if (!isDigit(c))  {
+  			  if (c == '/' || c == ' ') {
+  				if (c == '/') {
+  				    state = State.LOOKING_FOR_DENOMINATOR;
+  				} else {
+  				    state = State.LOOKING_FOR_SLASH;
+  				}
+  			  } else {
+  				state = State.READING_NUMERATOR;
+  			  }
+  		    }
+  		    break;
+  		case LOOKING_FOR_SLASH: 
+  		    if (c == '/') {
+  			  state = State.LOOKING_FOR_DENOMINATOR;
+  		    } else if (c != ' ') {
+  			  state = State.LOOKING_FOR_NUMERATOR;
+  		    }
+  		    break;
+  		case LOOKING_FOR_DENOMINATOR: 
+  		    if (isDigit(c)) {
+  			  state = State.READING_DENOMINATOR;
+  		    } else if (c != ' ') {
+  			  state = State.LOOKING_FOR_NUMERATOR;
+  		    }
+  		    break;
+  		case READING_DENOMINATOR: 
+  		    if (!isDigit(c)) {
+  			  return true;
+  		    }
+  		    break;
+  		default: 
+  		    throw new IllegalStateException("This should never happen: " + state);
+  		}
+  	  }
+  	  return false;
+    }
+
+    public static String transformFractions(int num, int den, Language lang) {
+	  Map<Integer,String> numeratorMap = null;
+	  Map<Integer,String> denominatorMap = null;
+	  switch (lang) {
+	  case DE: 
+		numeratorMap = numeratorGermanMap;
+		if (num == 1) {
+		    denominatorMap = denominatorSingularGermanMap;
+		} else {
+		    denominatorMap = denominatorPluralGermanMap;
+		}
+		break;
+	  case EN: 
+		numeratorMap = numeratorEnglishMap;
+		if (num == 1) {
+		    denominatorMap = denominatorSingularEnglishMap;
+		} else {
+		    denominatorMap = denominatorPluralEnglishMap;
+		}
+		break;
+	  case ES: 
+		numeratorMap = numeratorSpanishMap;
+		if (num == 1) {
+		    denominatorMap = denominatorSingularSpanishMap;
+		} else {
+		    denominatorMap = denominatorPluralSpanishMap;
+		}
+	  default: 
+		throw new IllegalArgumentException("Invalid language: " + lang);
+	  }
+	  if (num == 1 && den == 2 && lang == Language.ES) { // exception
+		return "una mitad";
+	  } else {
+		return numeratorMap.get(num) + " " + denominatorMap.get(den);
+	  }
+    }
+    
+    /**
      * Takes a string and returns the same string without whitespace
      * on the borders and with all whitespace normalised to length 1.
      *
@@ -324,6 +486,206 @@ public class MessagesConverter {
 	  }
 	  return new String(charArray).trim();
     }	
+
+
+
+    private static Map<Integer,String> numeratorGermanMap    = new HashMap<Integer,String>();
+    private static Map<Integer,String> denominatorSingularGermanMap  = new HashMap<Integer,String>();
+    private static Map<Integer,String> denominatorPluralGermanMap  = new HashMap<Integer,String>();
+    private static Map<Integer,String> numeratorEnglishMap   = new HashMap<Integer,String>();
+    private static Map<Integer,String> denominatorSingularEnglishMap = new HashMap<Integer,String>();
+    private static Map<Integer,String> denominatorPluralEnglishMap = new HashMap<Integer,String>();
+    private static Map<Integer,String> numeratorSpanishMap   = new HashMap<Integer,String>();
+    private static Map<Integer,String> denominatorSingularSpanishMap = new HashMap<Integer,String>();
+    private static Map<Integer,String> denominatorPluralSpanishMap = new HashMap<Integer,String>();
+
+    static {
+	  // This could be more efficient / reduced in size by reducing 
+	  // redundancy and complicatinf a bit the code in 
+	  // transformFractions(int, int, Language), e.g. the plural of 
+	  // all English denominators except "half" can be done by adding
+	  // "s" to the singular one, but for now I think it is better if 
+	  // we have simple code and think about those efficiencies later; 
+	  // three HashMaps with 20 entries each are not going to be a
+	  // bottleneck in iTalk2Learn
+	  numeratorEnglishMap.put(1,  "one");
+	  numeratorEnglishMap.put(2,  "two");
+	  numeratorEnglishMap.put(3,  "three");
+	  numeratorEnglishMap.put(4,  "four");
+	  numeratorEnglishMap.put(5,  "five");
+	  numeratorEnglishMap.put(6,  "six");
+	  numeratorEnglishMap.put(7,  "seven");
+	  numeratorEnglishMap.put(8,  "eight");
+	  numeratorEnglishMap.put(9,  "nine");
+	  numeratorEnglishMap.put(10, "ten");
+	  numeratorEnglishMap.put(11, "eleven");
+	  numeratorEnglishMap.put(12, "twelve");
+	  numeratorEnglishMap.put(13, "thirteen");
+	  numeratorEnglishMap.put(14, "fourteen");
+	  numeratorEnglishMap.put(15, "fifteen");
+	  numeratorEnglishMap.put(16, "sixteen");
+	  numeratorEnglishMap.put(17, "seventeen");
+	  numeratorEnglishMap.put(18, "eighteen");
+	  numeratorEnglishMap.put(19, "nineteen");
+	  numeratorEnglishMap.put(20, "twenty");
+	  denominatorSingularEnglishMap.put(2,  "half");
+	  denominatorSingularEnglishMap.put(3,  "third");
+	  denominatorSingularEnglishMap.put(4,  "quarter");
+	  denominatorSingularEnglishMap.put(5,  "fifth");
+	  denominatorSingularEnglishMap.put(6,  "sixth");
+	  denominatorSingularEnglishMap.put(7,  "seventh");
+	  denominatorSingularEnglishMap.put(8,  "eighth");
+	  denominatorSingularEnglishMap.put(9,  "ninth");
+	  denominatorSingularEnglishMap.put(10, "tenth");
+	  denominatorSingularEnglishMap.put(11, "eleventh");
+	  denominatorSingularEnglishMap.put(12, "twelveth");
+	  denominatorSingularEnglishMap.put(13, "thirteenth");
+	  denominatorSingularEnglishMap.put(14, "fourteenth");
+	  denominatorSingularEnglishMap.put(15, "fifteenth");
+	  denominatorSingularEnglishMap.put(16, "sixteenth");
+	  denominatorSingularEnglishMap.put(17, "seventeenth");
+	  denominatorSingularEnglishMap.put(18, "eighteenth");
+	  denominatorSingularEnglishMap.put(19, "nineteenth");
+	  denominatorSingularEnglishMap.put(20, "twentieth");
+	  denominatorPluralEnglishMap.put(2,  "halves");
+	  denominatorPluralEnglishMap.put(3,  "thirds");
+	  denominatorPluralEnglishMap.put(4,  "quarters");
+	  denominatorPluralEnglishMap.put(5,  "fifths");
+	  denominatorPluralEnglishMap.put(6,  "sixths");
+	  denominatorPluralEnglishMap.put(7,  "sevenths");
+	  denominatorPluralEnglishMap.put(8,  "eighths");
+	  denominatorPluralEnglishMap.put(9,  "ninths");
+	  denominatorPluralEnglishMap.put(10, "tenths");
+	  denominatorPluralEnglishMap.put(11, "elevenths");
+	  denominatorPluralEnglishMap.put(12, "twelveths");
+	  denominatorPluralEnglishMap.put(13, "thirteenths");
+	  denominatorPluralEnglishMap.put(14, "fourteenths");
+	  denominatorPluralEnglishMap.put(15, "fifteenths");
+	  denominatorPluralEnglishMap.put(16, "sixteenths");
+	  denominatorPluralEnglishMap.put(17, "seventeenths");
+	  denominatorPluralEnglishMap.put(18, "eighteenths");
+	  denominatorPluralEnglishMap.put(19, "nineteenths");
+	  denominatorPluralEnglishMap.put(20, "twentieths");
+
+	  numeratorGermanMap.put(1,  "ein");
+	  numeratorGermanMap.put(2,  "zwei");
+	  numeratorGermanMap.put(3,  "drei");
+	  numeratorGermanMap.put(4,  "vier");
+	  numeratorGermanMap.put(5,  "fünf");
+	  numeratorGermanMap.put(6,  "sechs");
+	  numeratorGermanMap.put(7,  "sieben");
+	  numeratorGermanMap.put(8,  "acht");
+	  numeratorGermanMap.put(9,  "neun");
+	  numeratorGermanMap.put(10, "zehn");
+	  numeratorGermanMap.put(11, "elf");
+	  numeratorGermanMap.put(12, "zwölf");
+	  numeratorGermanMap.put(13, "dreizehn");
+	  numeratorGermanMap.put(14, "vierzehn");
+	  numeratorGermanMap.put(15, "fünfzehn");
+	  numeratorGermanMap.put(16, "sechszehn");
+	  numeratorGermanMap.put(17, "siebzehn");
+	  numeratorGermanMap.put(18, "achtzehn");
+	  numeratorGermanMap.put(19, "neunzehn");
+	  numeratorGermanMap.put(20, "zwanzig");
+	  denominatorSingularGermanMap.put(2,  "halb");
+	  denominatorSingularGermanMap.put(3,  "drittel");
+	  denominatorSingularGermanMap.put(4,  "viertel");
+	  denominatorSingularGermanMap.put(5,  "fünftel");
+	  denominatorSingularGermanMap.put(6,  "sechstel");
+	  denominatorSingularGermanMap.put(7,  "siebtel");
+	  denominatorSingularGermanMap.put(8,  "achtel");
+	  denominatorSingularGermanMap.put(9,  "neuntel");
+	  denominatorSingularGermanMap.put(10, "zehntel");
+	  denominatorSingularGermanMap.put(11, "elftel");
+	  denominatorSingularGermanMap.put(12, "zwölftel");
+	  denominatorSingularGermanMap.put(13, "dreizehntel");
+	  denominatorSingularGermanMap.put(14, "vierzehntel");
+	  denominatorSingularGermanMap.put(15, "fünfzehntel");
+	  denominatorSingularGermanMap.put(16, "sechszehntel");
+	  denominatorSingularGermanMap.put(17, "siebzehntel");
+	  denominatorSingularGermanMap.put(18, "achtzehntel");
+	  denominatorSingularGermanMap.put(19, "neunzehntel");
+	  denominatorSingularGermanMap.put(20, "zwanzigstel");
+	  denominatorPluralGermanMap.put(2,  "halbe");
+	  denominatorPluralGermanMap.put(3,  "drittel");
+	  denominatorPluralGermanMap.put(4,  "viertel");
+	  denominatorPluralGermanMap.put(5,  "fünftel");
+	  denominatorPluralGermanMap.put(6,  "sechstel");
+	  denominatorPluralGermanMap.put(7,  "siebtel");
+	  denominatorPluralGermanMap.put(8,  "achtel");
+	  denominatorPluralGermanMap.put(9,  "neuntel");
+	  denominatorPluralGermanMap.put(10, "zehntel");
+	  denominatorPluralGermanMap.put(11, "elftel");
+	  denominatorPluralGermanMap.put(12, "zwölftel");
+	  denominatorPluralGermanMap.put(13, "dreizehntel");
+	  denominatorPluralGermanMap.put(14, "vierzehntel");
+	  denominatorPluralGermanMap.put(15, "fünfzehntel");
+	  denominatorPluralGermanMap.put(16, "sechszehntel");
+	  denominatorPluralGermanMap.put(17, "siebzehntel");
+	  denominatorPluralGermanMap.put(18, "achtzehntel");
+	  denominatorPluralGermanMap.put(19, "neunzehntel");
+	  denominatorPluralGermanMap.put(20, "zwanzigstel");
+
+	  numeratorSpanishMap.put(1,  "un");
+	  numeratorSpanishMap.put(2,  "dos");
+	  numeratorSpanishMap.put(3,  "tres");
+	  numeratorSpanishMap.put(4,  "cuatro");
+	  numeratorSpanishMap.put(5,  "cinco");
+	  numeratorSpanishMap.put(6,  "seis");
+	  numeratorSpanishMap.put(7,  "siete");
+	  numeratorSpanishMap.put(8,  "ocho");
+	  numeratorSpanishMap.put(9,  "nueve");
+	  numeratorSpanishMap.put(10, "diez");
+	  numeratorSpanishMap.put(11, "once");
+	  numeratorSpanishMap.put(12, "doce");
+	  numeratorSpanishMap.put(13, "threce");
+	  numeratorSpanishMap.put(14, "catorce");
+	  numeratorSpanishMap.put(15, "quince");
+	  numeratorSpanishMap.put(16, "dieciseis"); // can I write "dieciéis"?
+	  numeratorSpanishMap.put(17, "diecisiete");
+	  numeratorSpanishMap.put(18, "diechiocho");
+	  numeratorSpanishMap.put(19, "diecinueve");
+	  numeratorSpanishMap.put(20, "veinte");
+	  denominatorSingularSpanishMap.put(2,  "mitad");
+	  denominatorSingularSpanishMap.put(3,  "tercio");
+	  denominatorSingularSpanishMap.put(4,  "cuarto");
+	  denominatorSingularSpanishMap.put(5,  "quinto");
+	  denominatorSingularSpanishMap.put(6,  "sexto");
+	  denominatorSingularSpanishMap.put(7,  "septimo");  // can I write "séptimo"?
+	  denominatorSingularSpanishMap.put(8,  "octavo");
+	  denominatorSingularSpanishMap.put(9,  "noveno");
+	  denominatorSingularSpanishMap.put(10, "decimo"); // can I write "décimo"?
+	  denominatorSingularSpanishMap.put(11, "onceavo");
+	  denominatorSingularSpanishMap.put(12, "doceavo");
+	  denominatorSingularSpanishMap.put(13, "treceavo");
+	  denominatorSingularSpanishMap.put(14, "catorceavo");
+	  denominatorSingularSpanishMap.put(15, "quinceavo");
+	  denominatorSingularSpanishMap.put(16, "dieciseisavo");
+	  denominatorSingularSpanishMap.put(17, "diecisietavo");
+	  denominatorSingularSpanishMap.put(18, "dieciochoavo");
+	  denominatorSingularSpanishMap.put(19, "diecinueveavo");
+	  denominatorSingularSpanishMap.put(20, "veinteavo");
+	  denominatorPluralSpanishMap.put(2,  "mitades");
+	  denominatorPluralSpanishMap.put(3,  "tercios");
+	  denominatorPluralSpanishMap.put(4,  "cuartos");
+	  denominatorPluralSpanishMap.put(5,  "quintos");
+	  denominatorPluralSpanishMap.put(6,  "sextos");
+	  denominatorPluralSpanishMap.put(7,  "septimos"); // can I write "séptimos"?
+	  denominatorPluralSpanishMap.put(8,  "octavos");
+	  denominatorPluralSpanishMap.put(9,  "novenos");
+	  denominatorPluralSpanishMap.put(10, "decimos"); // can I write "décimos"?
+	  denominatorPluralSpanishMap.put(11, "onceavos");
+	  denominatorPluralSpanishMap.put(12, "doceavos");
+	  denominatorPluralSpanishMap.put(13, "treceavos");
+	  denominatorPluralSpanishMap.put(14, "catorceavos");
+	  denominatorPluralSpanishMap.put(15, "quinceavos");
+	  denominatorPluralSpanishMap.put(16, "dieciseisavos");
+	  denominatorPluralSpanishMap.put(17, "diecisietavos");
+	  denominatorPluralSpanishMap.put(18, "dieciochoavos");
+	  denominatorPluralSpanishMap.put(19, "diecinueveavos");
+	  denominatorPluralSpanishMap.put(20, "veinteavos");
+    }
+	
 
 	
 }

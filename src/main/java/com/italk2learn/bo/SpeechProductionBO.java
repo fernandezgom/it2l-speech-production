@@ -31,6 +31,11 @@ public class SpeechProductionBO implements ISpeechProductionBO  {
 
 	private static final Logger logger = LoggerFactory.getLogger(SpeechProductionBO.class);
 	
+	public static final String ENGLISH_MALE= "dfki-spike-hsmm";
+	public static final String ENGLISH_FEMALE= "cmu-slt-hsmm";
+	public static final String GERMAN_MALE= "dfki-pavoque-neutral-hsmm";
+	public static final String GERMAN_FEMALE= "bits1-hsmm";
+	
 	
     public SpeechProductionResponseVO generateAudioFile(SpeechProductionRequestVO request) {
     	SpeechProductionResponseVO response= new SpeechProductionResponseVO();
@@ -44,7 +49,14 @@ public class SpeechProductionBO implements ISpeechProductionBO  {
 			    	String value = (String)entry.getValue();
 			    	request.setMessage(value);
 			    }
-			} 
+			}
+			if (mc.containFraction(MessagesConverter.normaliseString(request.getMessage()))){
+				if (request.getLanguage().contains(SpeechProductionRequestVO.ENGLISH)){
+					request.setMessage(MessagesConverter.transformFractionsInString(MessagesConverter.normaliseString(request.getMessage()), MessagesConverter.Language.EN));
+				} else if (request.getLanguage().contains(SpeechProductionRequestVO.GERMAN)) {
+					request.setMessage(MessagesConverter.transformFractionsInString(MessagesConverter.normaliseString(request.getMessage()), MessagesConverter.Language.DE));
+				}
+			}
 			ResourceBundle rb= ResourceBundle.getBundle("speechproduction-config");
 			String _PATH=rb.getString("sp.path");
 			String finalName=request.getMessage()+request.getLanguage()+request.isVoiceType();
@@ -58,24 +70,24 @@ public class SpeechProductionBO implements ISpeechProductionBO  {
 				if (request.getLanguage().contains(SpeechProductionRequestVO.ENGLISH)){
 					if (request.isVoiceType()==true){
 						//JLF:Male voice
-						marytts.setVoice("dfki-spike-hsmm");
+						marytts.setVoice(ENGLISH_MALE);
 					}
 					else {
 						//JLF:Female voice
-						marytts.setVoice("cmu-slt-hsmm");
+						marytts.setVoice(ENGLISH_FEMALE);
 					}
 				}
 				else if (request.getLanguage().contains(SpeechProductionRequestVO.GERMAN)) {
 					if (request.isVoiceType()==true){
 						//JLF:Male voice
-						marytts.setVoice("dfki-pavoque-neutral-hsmm");
+						marytts.setVoice(GERMAN_MALE);
 					}
 					else {
 						//JLF:Female voice
-						marytts.setVoice("bits1-hsmm");
+						marytts.setVoice(GERMAN_FEMALE);
 					}
 				} else {
-					marytts.setVoice("cmu-slt-hsmm");
+					marytts.setVoice(ENGLISH_FEMALE);
 				}
 				AudioInputStream audio = marytts.generateAudio(request.getMessage());
 				AudioFormat audioFormat = audio.getFormat();
